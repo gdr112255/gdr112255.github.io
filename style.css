@@ -1,9 +1,306 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 40px;
-  line-height: 1.6;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
+  line-height: 1.7;
+  background: #f7f5ef;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* header */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-image {
+  width: 55px;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 18px;
   color: #2c5e4f;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  font-size: 14px;
+  color: #333;
+}
+
+.nav a:hover {
+  color: #2c5e4f;
+}
+
+.header-call-btn {
+  background: #2c5e4f;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* main home */
+.main-hero {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.main-hero-inner {
+  max-width: 800px;
+}
+
+.main-logo {
+  width: 180px;
+  margin: 0 auto 24px;
+}
+
+.main-title {
+  font-size: 2.4rem;
+  color: #2c5e4f;
+  margin-bottom: 18px;
+}
+
+.main-motto {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+.main-description {
+  font-size: 1.05rem;
+  color: #5f6c65;
+  max-width: 700px;
+  margin: 0 auto 28px;
+}
+
+.main-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* common */
+.sub-page {
+  padding: 70px 0;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-title h1 {
+  font-size: 2rem;
+  color: #2c5e4f;
+  margin-bottom: 12px;
+}
+
+.page-title p {
+  color: #5f6c65;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.primary {
+  background: #2c5e4f;
+  color: white;
+}
+
+.secondary {
+  background: white;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.card-grid {
+  display: grid;
+  gap: 25px;
+}
+
+.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  color: #2c5e4f;
+  margin-bottom: 10px;
+}
+
+/* steps */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.step {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.step-number {
+  display: inline-block;
+  background: #2c5e4f;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* about */
+.about-box {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 850px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.about-box p + p {
+  margin-top: 16px;
+}
+
+/* contact */
+.contact-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.contact-item {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-item h3 {
+  color: #2c5e4f;
+  margin-bottom: 8px;
+}
+
+/* floating call */
+.floating-call-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2c5e4f;
+  color: white;
+  padding: 15px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  z-index: 1200;
+}
+
+/* footer */
+.site-footer {
+  background: #2c5e4f;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+  }
+
+  .main-motto {
+    font-size: 1.2rem;
+  }
+
+  .three,
+  .steps,
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+
+  .header-call-btn {
+    display: none;
+  }
+
+  .floating-call-btn {
+    right: 14px;
+    bottom: 14px;
+    padding: 12px 16px;
+  }
 }
